@@ -53,7 +53,7 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyStatefulWidget> {
-  var _data;
+  JsonWidgetData? _data;
   @override
   void initState() {
     super.initState();
@@ -62,8 +62,8 @@ class _MyWidgetState extends State<MyStatefulWidget> {
   }
 
   @override
-  Widget build(BuildContext context) => _data.build(
-        context,
+  Widget build(BuildContext context) => _data!.build(
+        context: context,
       );
 }
 
